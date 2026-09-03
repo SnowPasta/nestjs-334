@@ -82,3 +82,9 @@ body {
   padding-left: 1.25rem;
   margin-top: 0.5rem;
 }
+
+.bandImage {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}

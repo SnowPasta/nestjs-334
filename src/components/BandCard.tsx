@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Band } from "@/types/band";
 
 type BandCardProps = {
@@ -7,6 +8,16 @@ type BandCardProps = {
 export default function BandCard({ band }: BandCardProps) {
   return (
     <article className="bandCard">
+      {band.imageUrl && (
+        <Image
+          src={band.imageUrl}
+          alt={band.name}
+          width={300}
+          height={300}
+          className="bandImage"
+        />
+      )}
+
       <h2>{band.name}</h2>
       <p>แนวเพลง: {band.genre}</p>
       <ul>
